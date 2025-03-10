@@ -1,22 +1,22 @@
 create table Employees (
-    eid integer,
-    ename text,
-    age integer,
-    salary real,
+    eid     integer,
+    ename   text,
+    age     integer,
+    salary  integer,
     primary key (eid)
 );
 
 create table Departments (
-    did integer,
-    dname text,
-    budget integer,
+    did     integer,
+    dname   text,
+    budget  integer,
     manager integer references Employees(eid),
     primary key (did)
 );
 
 create table WorksIn (
-    eid integer references Employees(eid),
-    did integer references Departments(did),
+    eid     integer references Employees(eid),
+    did     integer references Departments(did),
     percent integer,
     primary key (eid, did)
 );
