@@ -16,7 +16,17 @@ greet() {
 
 # This works (Returns number)
 add 1 3
-echo "$?"
+var1="$?"
+
+add 2 4
+var2="$?"
+
+add "$var1" "$var2"
+var3="$?"
+
+echo "var1 is $var1"
+echo "var2 is $var2"
+echo "var3 is $var3"
 
 greetings "Bob" "Steve"
 

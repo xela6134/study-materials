@@ -3,13 +3,13 @@ create table Suppliers (
     sname   text,
     address text
 );
-
+ 
 create table Parts (
     pid     integer primary key,
     pname   text,
     colour  text
 );
-
+ 
 create table Catalog (
     sid     integer references Suppliers(sid),
     pid     integer references Parts(pid),
