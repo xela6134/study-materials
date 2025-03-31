@@ -1,0 +1,6 @@
+Loid|31|Spy
+Mikasa|21|Fighter
+Ai|20|Idol
+Armin|22|Titan
+Satoru|28|Teacher
+Anya|6|Student
