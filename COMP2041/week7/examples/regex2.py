@@ -2,6 +2,8 @@
 
 import re
 
+# re.fullmatch and re.sub
+
 text = "12345"
 pattern = r"[0-9]+"
 match = re.fullmatch(pattern, text)

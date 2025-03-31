@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
 
-# re.search and re.match
-
 import re
+
+# Much more flags & other features. 
+# Check https://docs.python.org/3/library/re.html
+
+# re.search and re.match
 
 # Example for re.search
 text = "my life is cooked"

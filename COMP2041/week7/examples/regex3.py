@@ -2,6 +2,8 @@
 
 import re
 
+# re.findall and re.split
+
 # Finding 'ain'
 text = "The rain in Spain stays mainly in the plain"
 pattern = "ain"
@@ -37,8 +39,5 @@ hello world
 pattern = "hello world"
 matches = re.findall(pattern, text, re.IGNORECASE)
 print("re.IGNORECASE:", matches)
-
-# Much more flags & other features. 
-# Check https://docs.python.org/3/library/re.html
 
 hi = r'\d+(\.\d+)?'
