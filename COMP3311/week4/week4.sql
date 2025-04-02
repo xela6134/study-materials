@@ -3,7 +3,7 @@ create table Suppliers (
     sname   text,
     address text
 );
- 
+
 create table Parts (
     pid     integer primary key,
     pname   text,

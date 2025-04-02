@@ -33,4 +33,3 @@ with open('data.txt', 'r') as readfile:
         for data in datas:
             print(data.strip(), end=', ')
         print('')
-

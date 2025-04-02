@@ -45,3 +45,7 @@ for number in numbers.values():
     for num in number:
         print(f"{num}, ", end='')
     print('')
+
+print("\nMultiple variables assigned when printing")
+for key, val in person.items():
+    print(f"{key}: {val}")
