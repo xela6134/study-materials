@@ -21,7 +21,7 @@ print("\nRemoving banana again")
 fruits.remove("banana")
 print(fruits)
 
-# Replacing the first index of fruits
+# Replacing index 1 of fruits
 print("\nReplacing the first element")
 fruits[1] = "blueberry"
 print(fruits)

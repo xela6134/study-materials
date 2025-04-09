@@ -7,6 +7,9 @@ if len(sys.argv) > 1 and sys.argv[1].startswith('-'):
     arg = arg[1:]
     n_lines = int(arg)
 
+# $1          $2          $3
+# sys.argv[1] sys.argv[2] sys.argv[3]
+
 print(f"n_lines is {n_lines}")
 
 for filename in sys.argv[1:]:
