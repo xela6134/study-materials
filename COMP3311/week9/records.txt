@@ -21,3 +21,249 @@ BC => BCD : Attribute B&C can uniquely identify B, C and D
 AC => ABC => ABCD (all the attributes)
 
 AC will be a candidate key of this schema.
+
+ABCDEFG { A → B, BC → F, BD → EG, AD → C, BEG → FA }
+
+A+: A = AB
+ACEG+ = ABCEG = ABCEFG
+BD+ = BDEG = ABDEFG = ABCDEFG
+
+// List of the functional dependencies { A->B, BC->E, ED->A }
+CD => 
+
+CDE => ACDE => ABCDE
+ACD => ABCD => ABCDE
+BCD => BCDE => ABCDE
+
+// Q3. 
+ABCDE: A->B, BC->E, ED->A
+
+1. X → Y is trivial (is Y a subset of X?)
+    e.g. `AB → A` 
+2. X is a superkey
+3. Y is a single attribute & part of a candidate key
+    e.g. `AE → BC` will not work Y is not a single attribute
+
+Candidate Keys: CDE or ACD or BCD
+
+A->B : Condition 3 (not condition 2)
+BC->E: Condition 3 (not condition 2)
+ED->A: Condition 3 (not condition 2)
+
+3NF form, but not BCNF form
+
+// Q4
+
+ABCD, {ABC->D, D->A}
+
+ABC => ABCD
+BCD => ABCD
+
+Candidate keys: ABC and BCD
+
+ABC->D Condition 2 (O) Condition 3 (O)
+D->A   Condition 2 (X) Condition 3 (O)
+
+BCNF (X) 3NF (O)
+
+1. X → Y is trivial (is Y a subset of X?)
+    e.g. `AB → A` 
+2. X is a superkey
+3. Y is a single attribute & part of a candidate key
+    e.g. `AE → BC` will not work Y is not a single attribute
+
+// Example (BCNF)
+For a schema {A, B, C, D}, assume there are FDs {A → B, B → C, C → D}.
+A => AB => ABC => ABCD
+
+A->B Condition 2 (O)
+B->C Condition 2 (X)
+C->D Condition 2 (X)
+
+U = {A, B, C, D}
+X->Y
+Split into (U - Y), (X + Y)
+aka (Everything - RHS), (LHS + RHS)
+
+C->D, U = (ABCD)
+
+ABCD - D, CD
+ABC, CD
+
+ABC - C, BC
+AB, BC, CD
+
+// 3NF Decomposition
+ABCD, {B->C, D->A}
+
+BD => ABCD
+
+1. X → Y is trivial (is Y a subset of X?)
+    e.g. `AB → A` 
+2. X is a superkey
+3. Y is a single attribute & part of a candidate key
+    e.g. `AE → BC` will not work Y is not a single attribute
+
+B->C: 2X 3X
+D->A: 2X 3X
+
+3NF: (BC) (AD) (AB)
+
+---------------------------------------------------------------------------------------------------------
+
+zID      email   name    majors  age
+z5000001 a@a.com Alex
+z5000002 b@b.com Bob
+z5000003 c@c.com Claire
+
+  Primary Key: zID
+Candidate Key: zID || email
+    Super Key: zID & name || email & majors & age
+
+Primary Key <= Candidate Key <= Super Key
+
+For table with attributes ABCD, FDs are { A → B, BC → D }
+
+Candidate Key: uniquely identifies all of the attributes for this table (ABCD)
+Group of attributes, which cannot be reduced further, identifying all of the attributes for this table.
+
+A => AB
+BC => BCD
+
+AC => ABC => ABCD
+
+Therefore, candidate key is AC for this table.
+
+Q2-C)
+A → B, BC → F, BD → EG, AD → C, BEG → FA
+
+BD => BDEG => ABDEFG => ABCDEFG
+
+Candidate key: Stuff that never appears on RHS
+
+D
+
+Consider the relation R(A,B,C,D,E) and the set set of functional dependencies F = { A → B, BC → E, ED → A }
+- List all of the candidate keys for R.
+
+CD
+
+We know that we have to start from CD, but we need to add a few extra attributes if possible
+
+ACD => ABCD => ABCDE
+BCD => BCDE => ABCDE
+CDE => ACDE => ABCDE
+
+Candidate Keys: ACD, BCD and CDE
+
+Consider the relation R(A,B,C,D,E) and the set set of functional dependencies F = { A → B, BC → E, ED → A }
+Q1. List all of the candidate keys for R.
+Q2. Is R in third normal form (3NF)?
+Q3. Is R in Boyce-Codd normal form (BCNF)?
+
+Conditions
+1. X → Y is trivial (is Y a subset of X?)
+    e.g. `AB → A` (none of these come up in exams)
+2. X is a superkey
+3. Y is a single attribute & part of a candidate key
+    e.g. `AE → BC` will not work Y is not a single attribute
+
+1. ACD, BCD, CDE
+2. 
+
+ A->B: Condition 3(O)
+BC->E: Condition 3(O)
+ED->A: Condition 3(O)
+
+BCNF(X), 3NF(O)
+
+// Q4. ii
+
+A,B,C,D {B → C, D → A}
+
+Conditions
+1. X → Y is trivial (is Y a subset of X?)
+    e.g. `AB → A` (none of these come up in exams)
+2. X is a superkey
+3. Y is a single attribute & part of a candidate key
+    e.g. `AE → BC` will not work Y is not a single attribute
+
+BD => ABCD
+
+Candidate key: BD
+
+B->C: 2X 3X
+D->A: 2X 3X
+
+not 3nf and bcnf
+
+// Splitting table ABCD into tables which satisfy 3NF
+A,B,C,D {B → C, D → A}
+
+(ABCD)
+'Flatten into relations' (after computing minimal cover): (BC) (DA)
+Candidate key was BD, so make a new table (BD).
+Therefore we are left with tables (BD), (BC), (DA).
+
+// BCNF Example
+For a schema {A, B, C, D}, assume there are FDs {A → B, B → C, C → D}.
+
+Candidate Key: A
+
+Conditions
+1. X → Y is trivial (is Y a subset of X?)
+    e.g. `AB → A` (none of these come up in exams)
+2. X is a superkey
+
+A->B: O
+B->C: X
+C->D: X
+
+A->B->C->D
+
+BCNF schema X
+
+U: A, B, C, D
+We want to split into (U - Y) and (X + Y)
+aka (Everything - RHS) and (LHS + RHS)
+
+Instead of B->C and then C->D, you want to start with C->D then B->C.
+
+C->D: (ABCD - D) (CD)
+Tables left: (ABC) (CD)
+
+B->C: (ABC - C) (BC)
+Tables left: (AB) (BC) (CD)
+
+
+// Q7 a
+
+For each of the sets of dependencies in question 4:
+if R is not already in 3NF, decompose it into a set of 3NF relations
+if R is not already in BCNF, decompose it into a set of BCNF relations
+
+FDs: {C → D, C → A, B → C}, Table: {ABCD}
+
+B => BC => ABCD
+
+Conditions
+1. X → Y is trivial (is Y a subset of X?)
+    e.g. `AB → A` (none of these come up in exams)
+2. X is a superkey
+3. Y is a single attribute & part of a candidate key
+    e.g. `AE → BC` will not work Y is not a single attribute
+
+      1  2  3
+C->D: X  X  X
+C->A: X  X  X
+B->C: X  O  X
+
+C->D, C->A {ABCD}
+
+(Everything - RHS) (LHS + RHS)
+
+C->D: (ABCD - D) (CD)
+Tables left: (ABC) (CD)
+
+C->A: (ABC - A) (CA)
+Tables left: (BC) (CA) (CD)
