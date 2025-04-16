@@ -1,0 +1,23 @@
+zID      emails  name    majors  age
+z5000001 a@a.com Alex
+z5000002 b@b.com Bob
+z5000003 c@c.com Claire
+
+candidate key: zID, email
+primary key:   zID
+
+super key: { zID, name }
+
+primary key <= candidate key <= super key
+
+(A, B, C, D)
+FD = { A → B, BC → D }
+
+candidate keys need to uniquely identify all the attributes in a database
+
+A => AB   : Attribute A   can uniquely identify A and B
+BC => BCD : Attribute B&C can uniquely identify B, C and D
+
+AC => ABC => ABCD (all the attributes)
+
+AC will be a candidate key of this schema.
