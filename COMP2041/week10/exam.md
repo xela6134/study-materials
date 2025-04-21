@@ -54,6 +54,8 @@ For example, when `./q2.sh ex1.c ex2.py ex3.c ex4.c ex5.java ex6.cpp` is ran, th
 unknown: 1 time(s)
 ```
 
+Your output should exactly match the example above.
+
 Assume there only exists one `.` in the filename (No files such as `hi.cpp.py`)
 
 ### Question 3.
@@ -68,9 +70,11 @@ garbage: 7 lines
 one: 1 line
 ```
 
+Your output should exactly match the example above.
+
 Unlike Q2, all of the files must be valid. Assume all the filenames you'll be given are valid filenames.
 
-### Question 4 (If we have time)
+### Question 4
 
 Make a python file, when given files as command line arguments, checks if each file has all alphabetical characters (case insensitive). 
 
@@ -80,5 +84,7 @@ For example, when `./q4.py classes.tsv garbage one` is ran, the output should be
 Contains all alphabets: one
 Doesn't contain all alphabets: classes.tsv garbage 
 ```
+
+Your output should exactly match the example above.
 
 Again, assume the files are valid files inside the current directory.
