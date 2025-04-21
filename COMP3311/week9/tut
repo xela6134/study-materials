@@ -267,3 +267,136 @@ Tables left: (ABC) (CD)
 
 C->A: (ABC - A) (CA)
 Tables left: (BC) (CA) (CD)
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+zID -> email, major
+
+zID -> email
+zID -> major
+
+Students:
+zID      email   name    majors  age   driversLicense
+z5000001 a@a.com Alex
+z5000002 b@b.com Bob
+z5000003 c@c.com Claire
+
+primary key <= candidate key <= super key
+
+candidate key: zID, email, driversLicense
+super key: {zID, name, major}, {email, driversLicense}
+
+Attributes: ABCD
+FDs = { A->B, BC->D }
+
+A => AB
+BC => BCD
+
+AC => ABC => ABCD
+
+Closures:
+F = {A → B, BC → F, BD → EG, AD → C, BEG → FA}
+What is ACEG+?
+
+ACEG => ABCEG => ABCEFG
+
+BD => BDEG => 
+
+Q3
+
+ABCDE
+F = { A → B, BC → E, ED → A, BCDE -> A }
+
+Candidate keys: ACD BCD CDE
+ACD => ABCD => ABCDE
+BCD => BCDE => ABCDE
+CDE => ACDE => ABCDE
+
+Super Key: ACD ACDE ABCD ABCDE
+
+Conditions
+1. X → Y is trivial (is Y a subset of X?)
+    e.g. `AB → A` 
+2. X is a superkey
+3. Y is a single attribute & part of a candidate key
+    e.g. `AE → BC` will not work Y is not a single attribute
+
+       1  2  3
+ A->B  X  X  O
+BC->E  X  X  O
+ED->A  X  X  O
+
+Not a BCNF schema, but it is a 3NF schema.
+
+BCDE->A 
+
+BCDE a superkey? Yes, because candidate key is BCD, and this has an unnecessary E as well
+
+BCNF
+For a schema {A, B, C, D}, assume there are FDs {A → B, B → C, C → D}.
+
+      1  2
+A->B  X  O
+B->C  X  X
+C->D  X  X
+
+B->C and C->D are not BCNF
+
+Split into U - Y, and X + Y.
+
+Everything - RHS and LHS + RHS
+
+U = ABCD
+C->D 
+
+ABCD - D and C + D
+(ABC) (CD)
+
+B->C
+
+ABC - C and B + C
+(AB) (BC) (CD)
+
+4-ii: ABCD, B → C, D → A
+
+BD => BCD => ABCD
+
+Candidate key: BD
+
+Conditions
+1. X → Y is trivial (is Y a subset of X?)
+    e.g. `AB → A` 
+2. X is a superkey
+3. Y is a single attribute & part of a candidate key
+    e.g. `AE → BC` will not work Y is not a single attribute
+      
+       1  2  3
+B → C  X  X  X
+D → A  X  X  X
+
+ABCD
+
+U = ABCD
+B->C
+
+ABCD - C and B + C
+ABD BC
+
+D → A
+
+ABD - A and A + D
+BD AD BC
+
+
+4-ii: ABCD, {B → C, D → A}
+Candidate key: BD
+
+(BC) (DA) (BD)
+
+4-i: ABCD, {C → D, C → A, B → C}
+
+B => BC => ABCD
+
+Candidate Key: B
+
+(CD) (CA) (BC)
