@@ -1,0 +1,2 @@
+- cut -f6 classes.tsv | cut -d' ' -f1,1 | sort | uniq -c
+- grep -Ev 'LAB' classes.tsv | cut -f6,6 | cut -d' ' -f2 | cut -d'-' -f2 | sort -n | uniq
