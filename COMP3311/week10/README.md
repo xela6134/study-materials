@@ -1,3 +1,3 @@
 # Cheatsheet
 
-To anyone who's reading this, after a talk with some other tutors I came to the conclusion my cheatsheet I made in previous terms has too much materials from past exam papers that are not supposed to be disclosed. Half of my cheatsheet's contents are spammed with examples from the past papers, but unfortunately this term the amount of past papers released to students have been reduced from 5 to 2, and I don't think uploading my cheatsheet will be unfair for other students in general who won't have access to my cheatsheet who cannot access the past papers. I am really sorry that I cannot upload my cheatsheets, and wish all of you the best for the upcoming exam on the 12th.
+Not supposed to be disclosed as this will be a closed book exam from this term :((
