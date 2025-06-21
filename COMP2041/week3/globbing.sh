@@ -8,7 +8,7 @@
 # 5. junk/hell?.c
 # 6. junk/*.java
 
-for file in junk/hell?.c
+for file in junk/*.c*
 do
     echo "$file"
 done
