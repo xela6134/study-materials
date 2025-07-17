@@ -1,0 +1,10 @@
+Consistency
+- Newlines & Spacing should be consistent
+- Formats should be consistent (while, for etc)
+- No unnecessary newlines & spaces
+- Tab size consistency
+
+Commenting (aka Descriptiveness)
+- Header comments for each file
+- Comments (1 or 2 lines) before large chunks of code
+- Descriptive variable names
