@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+# Slicing Iterables
+
 s = "Hello, World!"
 
 # [start]

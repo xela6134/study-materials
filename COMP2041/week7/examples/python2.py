@@ -12,16 +12,15 @@ file = open('./example.txt')
 for line in file:
     print(line, end='') # equivalent to echo -n
 
-# You can also multiply strings
+# You can also multiply strings!
 print('-+' * 15)
 
 # This doesn't work, 'for' here just splits character by character by default
-for line in multiline_string:
-    print(line)
+# for line in multiline_string:
+#     print(line)
 
-print("-+" * 15)
-
-# This works
+# Using the split() function
+# split() default splits by tabs, spaces and newlines (any whitespace related stuff)
 line_splitted = multiline_string.split('\n')
 for line in line_splitted:
     print(line)
