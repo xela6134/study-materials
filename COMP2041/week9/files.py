@@ -7,7 +7,11 @@ target_dir = 'demo'
 file_path = os.path.join(target_dir, 'example.txt')
 copy_path = os.path.join(target_dir, 'example_copy.txt')
 
-# cd: Change to desired directory (create if needed)
+print("file_path and copy_path")
+print(file_path)
+print(copy_path)
+
+# mkdir
 if not os.path.isdir(target_dir):
     os.mkdir(target_dir)
     print(f"Created directory: {target_dir}")
@@ -15,7 +19,7 @@ if not os.path.isdir(target_dir):
 # Save the current working directory to return later
 original_dir = os.getcwd()
 
-# Change directory to target_dir
+# Change directory to target_dir (equivalent of cd)
 os.chdir(target_dir)
 print("Changed directory to:", os.getcwd())
 
@@ -32,7 +36,7 @@ with open('example.txt', 'a') as file:
 print("Appended to example.txt")
 
 # Check file exists
-if os.path.exists('example.txt'):
+if os.path.isfile('example.txt'):
     print("example.txt exists!")
 
 # Make a copy of the file to compare
