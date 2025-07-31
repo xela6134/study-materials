@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# Dictionaries match a key with its value!
+# Dictionaries match a key (aka index) with its value!
 person = {
     "name": "Anya",
     "age": 6,
@@ -43,9 +43,11 @@ print('')
 for number in numbers.values():
     print("num: ", end='')
     for num in number:
-        print(f"{num}, ", end='')
+        print(f"{num} | ", end='')
     print('')
 
 print("\nMultiple variables assigned when printing")
 for key, val in person.items():
     print(f"{key}: {val}")
+
+print(person)
