@@ -10,9 +10,9 @@ greetings() {
     echo "Hello $1 and $2!"
 }
 
-greet() {
-    return "Hello $1 and $2!"
-}
+# greet() {
+#     return "Hello $1 and $2!"
+# }
 
 # This works (Returns number)
 add 1 3

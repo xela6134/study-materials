@@ -14,5 +14,5 @@ cd "$1" 2>/dev/null
 if [ "$?" != 0 ]; then
     echo "Something is wrong..."
 else
-    echo *.*
+    echo *.c
 fi

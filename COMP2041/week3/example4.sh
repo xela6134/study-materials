@@ -7,7 +7,6 @@ count=1
 # - while
 # - Arithmetic operations
 
-# Loop until count is greater than 5
 while [ "$count" -le 5 ]
 do
     echo "Current count: $count"

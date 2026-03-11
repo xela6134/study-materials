@@ -1,8 +1,8 @@
 #!/bin/dash
 
 # Basic function
-yeet() {
-    echo "yeet"
+hello() {
+    echo "hello"
 }
 
-yeet
+hello
