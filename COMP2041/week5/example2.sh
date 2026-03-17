@@ -16,7 +16,7 @@ fi
 # Constants provided by command line arguments
 DIRECTORY="$1"
 
-if [ ! -d "$DIRECTORY" ]
+if ! [ -d "$DIRECTORY" ]
 then
     echo "Error: Directory $DIRECTORY does not exist."
     exit 1
