@@ -3,6 +3,7 @@
 import re
 
 # re.fullmatch and re.sub
+# grep -E ^ $
 
 text = "12345"
 pattern = r"[0-9]+"
@@ -20,6 +21,7 @@ else:
     print("nope")
 
 # Example for re.sub
+# sed -E 's/regex/replace/'
 text = "The rain in Spain"
 pattern = "rain"
 replacement = "snow"

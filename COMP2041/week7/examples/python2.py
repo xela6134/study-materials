@@ -13,7 +13,7 @@ for line in file:
     print(line, end='') # equivalent to echo -n
 
 # You can also multiply strings!
-print('-+' * 15)
+print('abc' * 15)
 
 # This doesn't work, 'for' here just splits character by character by default
 # for line in multiline_string:
@@ -28,6 +28,7 @@ for line in line_splitted:
 # Another way of reading a file and splitting a line
 with open('data.txt', 'r') as readfile:
     for line in readfile:
+        # gives us a list
         datas = line.split('|')
         for data in datas:
             print(data.strip(), end=', ')

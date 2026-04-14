@@ -6,6 +6,8 @@ import re
 # Check https://docs.python.org/3/library/re.html
 
 # re.search and re.match
+# re.search: grep -E
+# re.match : grep -E ^
 
 # Example for re.search
 text = "my life is cooked"
@@ -43,6 +45,8 @@ else:
 
 example = "abc123def456ghi7890jkl"
 result = re.search(r'(\d+)[a-z]+(\d+)[a-z]+(\d+)', example)
+
+regexstr = r'[0-9]+'
 
 if result:
     print(f"group: {result.groups()}")

@@ -24,6 +24,7 @@ done
 # - newlines between chunks of code
 # - using same syntax throughout code (e.g. while loops syntax)
 # - correct consistent tab indentation
+# - semicolon vs newline for while, for, if etc (use one only!)
 
 # 2. 'descriptiveness'
 # - better variable names

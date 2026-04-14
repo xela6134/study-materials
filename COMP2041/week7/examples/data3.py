@@ -47,7 +47,9 @@ for number in numbers.values():
     print('')
 
 print("\nMultiple variables assigned when printing")
-for key, val in person.items():
+for key, val in person.items(): # items has key & value at the same time
     print(f"{key}: {val}")
+    print(f"key is {key}")
+    print(f"val is {val}")
 
 print(person)

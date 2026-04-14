@@ -6,7 +6,7 @@ print(numbers)
 numbers_list = list(numbers)
 print(numbers_list)
 
-print("\nPrinting from 1 to 5")
+print("\nPrinting from 0 to 4")
 for i in range(5):
     print(i)
 

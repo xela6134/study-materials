@@ -18,6 +18,7 @@ if not os.path.isdir(target_dir):
 
 # Save the current working directory to return later
 original_dir = os.getcwd()
+print(f"original_dir: {original_dir}")
 
 # Change directory to target_dir (equivalent of cd)
 os.chdir(target_dir)
