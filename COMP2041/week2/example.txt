@@ -1,0 +1,7 @@
+cucumber
+$apple
+banana
+grape
+!kiwi
+123lemon
+melon
