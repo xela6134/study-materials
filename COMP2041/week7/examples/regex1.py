@@ -10,7 +10,7 @@ import re
 # re.match : grep -E ^
 
 # Example for re.search
-text = "my life is cooked"
+text = "my name is bob"
 pattern = "my"
 match = re.search(pattern, text)
 if match:
@@ -19,18 +19,17 @@ else:
     print("No match found")
 
 # Example for re.match
-text = "life is cooked"
-pattern = "life"
+text = "my name is bob"
+pattern = "my"
 match = re.match(pattern, text)
 if match:
     print("Found", match.group(), "at position", match.start())
 else:
     print("No match found")
 
-# Example where re.match fails but re.search works
-text = "my life is cooked"
-pattern = "life"
 
+# Example where re.match fails but re.search works
+pattern = "name"
 match = re.match(pattern, text)
 if match:
     print("Found", match.group(), "at position", match.start())
